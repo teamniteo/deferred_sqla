@@ -15,7 +15,7 @@ class ConfigurationContext(object):
     def __init__(self):
         self.models = set()
         
-    def register_sqla_model(self, model, category='main'):
+    def register_sqla_model(self, model):
         self.models.add(model)
 
     def attach_sqla_models_to_base(self, base):
