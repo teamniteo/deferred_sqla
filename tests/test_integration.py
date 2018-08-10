@@ -15,7 +15,7 @@ class TestPackageScans(unittest.TestCase):
 
     tearDown = setUp
         
-    def test_scan_and_attach_all_based_explicit_base(self):
+    def test_scan_and_attach(self):
         from sqlalchemy.ext.declarative import declarative_base
         base = declarative_base()
         config = self._makeConfig()
@@ -26,7 +26,9 @@ class TestPackageScans(unittest.TestCase):
             self.modelcfg.MyMainModel2,
             self.modelcfg.MyMainModel3,
         ])
-        self.assertEqual(len(config.models), 3)
+
+        self.assertEqual(config.models, models)
+        
         for model in models:
             self.assertTrue(
                 model._decl_class_registry is base._decl_class_registry
