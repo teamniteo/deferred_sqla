@@ -27,7 +27,7 @@ class TestPackageScans(unittest.TestCase):
             self.modelcfg.MyMainModel3,
         ])
 
-        self.assertEqual(config.models, models)
+        self.assertEqual(config._deferred_sqla_models, models)
         
         for model in models:
             self.assertTrue(
