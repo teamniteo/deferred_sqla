@@ -25,8 +25,8 @@ setup(
     long_description=long_description,
     license='Apache2',
     long_description_content_type='text/markdown',
-    url='https://github.com/niteoweb/pyramid_deferred_sqla',
-    author='Niteoweb',
+    url='https://github.com/teamniteo/pyramid_deferred_sqla',
+    author='Niteo',
     author_email='info@niteo.co',
     classifiers=[  # Optional
         'Development Status :: 3 - Alpha',
